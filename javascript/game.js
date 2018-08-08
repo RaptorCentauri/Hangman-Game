@@ -14,12 +14,11 @@ generateWord();
 
 // Replace the hidden character in the word with the guessLetter===========================
 String.prototype.replaceAt=function(index, replacement) {
-
     return this.substr(0, parseInt(index)) + replacement + this.substr(parseInt(index)+1);
 }
 
 //Pick a random word from the list
-function pickRandomWord(){ 
+function pickRandomWord(){
 	var randomNum = Math.floor(Math.random()*wordList.length);
 	randomWord = wordList[randomNum].toLowerCase();
 	console.log("The word is: " + randomWord);
@@ -42,7 +41,7 @@ function generateWord(){
 	document.getElementById("currentWord").innerHTML=updateWord;
 	document.getElementById("lettersGuessed").innerHTML=wrongLetter;
 	document.getElementById("winDialogue").innerHTML="";
-	document.getElementById("playAgain").style.visibility="";	
+	document.getElementById("playAgain").style.visibility="";
 }
 
 //draws the hangman drawing
@@ -91,7 +90,7 @@ function hideDraw(){
 		document.getElementById("legs").style.borderTopColor=""; //rightLeg}
 }
 
-// Get keystroke from user and validate if it's an alphabet and if it was already guessed 
+// Get keystroke from user and validate if it's an alphabet and if it was already guessed
 document.onkeyup = function(event){
 	if(event.keyCode <= 90 && event.keyCode >= 65 && wrongLetter.includes(event.key) == false){
 		wordSearch(event.key);
@@ -101,7 +100,8 @@ document.onkeyup = function(event){
 // Search word for the guessLetter
 function wordSearch(guessLetter){
 
-	
+
+
 //Check to see if the letter is in the word at all
 	if (!randomWord.includes(guessLetter)){
 		wrongLetter.push(guessLetter);
@@ -131,7 +131,7 @@ function wordSearch(guessLetter){
 			document.getElementById("winScore").innerHTML=score;
 			var youWon = "You Won!"
 			document.getElementById("winDialogue").innerHTML=youWon;
-			document.getElementById("playAgain").style.visibility="visible";	
+			document.getElementById("playAgain").style.visibility="visible";
 		}
-	}	
+	}
 }
