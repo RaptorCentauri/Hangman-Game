@@ -1,16 +1,20 @@
 {
   "name": "Hangman-Game",
+  "config": {
+    "awsBucketName": "daveleoshilander-hangman"
+  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "createBucket": "aws s3api create-bucket --bucket daveleoshilander-hangman --region us-east-1",
-    "setBucketPolicy": "aws s3api put-bucket-policy --bucket daveleoshilander-hangman --policy file://aws-policy.json",
-    "awsWebsite": "aws s3 website s3://daveleoshilander-hangman --index-document index.html",
+    "showVersion": "echo $npm_package_config_awsBucketName",
+    "createBucket": "aws s3api create-bucket --bucket $npm_package_config_awsBucketName --region us-east-1",
+    "setBucketPolicy": "aws s3api put-bucket-policy --bucket $npm_package_config_awsBucketName --policy file://aws-policy.json",
+    "awsWebsite": "aws s3 website s3://$npm_package_config_awsBucketName --index-document index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel ./index.html",
     "build": "parcel build ./index.html",
-    "deploy": "aws s3 sync dist/ s3://daveleoshilander-hangman"
+    "deploy": "aws s3 sync dist/ s3://$npm_package_config_awsBucketName"
   },
   "repository": {
     "type": "git",
@@ -22,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/RaptorCentauri/Hangman-Game/issues"
   },
-  "homepage": "https://github.com/RaptorCentauri/Hangman-Game#readme"
+  "homepage": "https://github.com/RaptorCentauri/Hangman-Game#readme",
+  "dependencies": {
+    "dotenv": "^6.0.0"
+  }
 }
