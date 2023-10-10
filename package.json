@@ -5,7 +5,7 @@
   },
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+
   "scripts": {
     "showVersion": "echo $npm_package_config_awsBucketName",
     "createBucket": "aws s3api create-bucket --bucket $npm_package_config_awsBucketName --region us-east-1",
