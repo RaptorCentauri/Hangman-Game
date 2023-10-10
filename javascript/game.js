@@ -1,5 +1,5 @@
 //Make an array of words
-var wordList = ["Stargate", "Atlantis", "Ancients", "Asgard", "Nox", "ZPM", "Thor", "Ra", "Teal'c", "Ronan Dex"];
+var wordList = ["Stargate", "Atlantis", "Ancients", "Asgard", "Nox", "ZPM", "Thor", "Hammond of Texas", "Teal'c", "Ronan Dex"];
 var wrongLetter = [];
 
 var randomWord;
