@@ -27,7 +27,7 @@
     "url": "https://github.com/RaptorCentauri/Hangman-Game/issues"
   },
   "homepage": "https://github.com/RaptorCentauri/Hangman-Game#readme",
-  "dependencies": {
-    "dotenv": "^6.0.0"
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.1"
   }
 }
