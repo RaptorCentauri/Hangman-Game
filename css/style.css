@@ -1,3 +1,7 @@
+:root{
+	--gameColor: #5dde11;
+}
+
 *{
 	font-family: 'VT323', monospace;
 }	
@@ -13,13 +17,12 @@ body{
 }
 
 #container > h1{
-	color: #21FF06;
+	color: var(--gameColor);
 	text-align: center;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	text-shadow: 0px 0px 3px white;
 	font-size: 600%;
 
 }
@@ -46,13 +49,11 @@ body{
 }
 
 #wordBox{
-	box-shadow: 0px 0px 7px white;
 	font-size: 300%;
 	background-color: Black;
-	color: #21FF06;
-	border-color: #21FF06;
+	color: var(--gameColor);
+	border-color: var(--gameColor);
 	box-sizing: border-box;
-	text-shadow: 0px 0px 3px white;
 	border-style: solid;
 	border-radius: 30px;
 	flex-basis: 65%;
@@ -68,13 +69,11 @@ body{
 
 
 #playAgain{
-	box-shadow: 0px 0px 7px white;
 	visibility: hidden;
 	background-color: Black;
-	border-color: #21FF06;
-	color: #21FF06;
+	border-color: var(--gameColor);
+	color: var(--gameColor);
 	font-size: 100%;
-	text-shadow: 0px 0px 3px white;
 	border-radius: 10px;
 	padding: 5px;
 	width: 275px;
@@ -82,9 +81,8 @@ body{
 }
 
 #hangmanImage{
-	box-shadow: 0px 0px 7px white;
-	color: #21FF06;
-	border-color: #21FF06;
+	color: var(--gameColor);
+	border-color: var(--gameColor);
 	box-sizing: border-box;
 	border-style: solid;
 	border-radius: 30px;
@@ -98,12 +96,10 @@ body{
 
 
 #badLetters{
-	box-shadow: 0px 0px 5px white;
-	text-shadow: 0px 0px 3px white;
 	font-size: 250%;
 	background-color: Black;
-	color: #21FF06;
-	border-color: #21FF06;
+	color: var(--gameColor);
+	border-color:var(--gameColor);
 	box-sizing: border-box;
 	border-style: solid;
 	border-radius: 15px;
@@ -116,12 +112,10 @@ body{
 }
 
 #scoreBox{
-	box-shadow: 0px 0px 5px white;
-	text-shadow: 0px 0px 3px white;
 	font-size: 300%;
 	background-color: Black;
-	color: #21FF06;
-	border-color: #21FF06;
+	color: var(--gameColor);
+	border-color: var(--gameColor);
 	box-sizing: border-box;
 	border-style: solid;
 	border-radius: 15px;
@@ -143,7 +137,7 @@ body{
 	top: 75px;
 	left: 110px;
 	position: absolute;
-	background-color: #21FF06;
+	background-color: var(--gameColor);
 	width: 100px;
 	height: 100px;
 	border-radius: 100%;
@@ -155,7 +149,7 @@ body{
 	position: absolute;
 	left: 158px;
 	top: 175px;
-	background-color: #21FF06;
+	background-color: var(--gameColor);
 	width: 5px;
 	height: 100px;
 }
